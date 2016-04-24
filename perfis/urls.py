@@ -19,6 +19,7 @@ from perfis.views import *
 urlpatterns = [
     url(r'^$',index),
     url(r'^exibir/(?P<perfil_id>\d+)$',exibir,name='perfil_exibir'),
-    url(r'^listar$',listar)
+    url(r'^listar$',listar,name='perfil_listar'),
+    url(r'^exibir/(?P<perfil_id>\d+)/convidar$',convidar,name='perfil_convidar')
     
 ]

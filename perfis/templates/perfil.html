@@ -8,5 +8,6 @@
         <p>Nome: {{perfil.nome}}</p>
         <p>Telefone: {{perfil.telefone}}</p>
         <p> E-mail: {{perfil.email}}</p>
+        <p><a href="{% url 'perfil_convidar' perfil.id %}">Convidar</a></p>
     </body>
 </html>
