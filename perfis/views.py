@@ -6,8 +6,8 @@ from perfis.models import Perfil
 def index(request):
     return render(request,'index.html')
 def exibir(request,perfil_id):
-    perfil=Perfil()
-    if (perfil_id=='1'):
-        perfil=Perfil('André Almeida','andre@mail.com','9899-8956')
-        
+    perfil=Perfil.objects.get(id=perfil_id)    
     return render(request,'perfil.html',{"perfil" : perfil})
+def listar(request):
+    perfis=Perfil.objects.all()
+    return render(request,'perfis.html',{"perfis":perfis})

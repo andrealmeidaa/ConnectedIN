@@ -1,7 +1,8 @@
 from django.db import models
 
-class Perfil(object):
-    def __init__(self,nome='',email='',telefone=''):
-        self.nome=nome
-        self.email=email
-        self.telefone=telefone
+class Perfil(models.Model):
+    #https://docs.djangoproject.com/en/1.9/ref/models/fields/
+    nome=models.CharField(max_length=255,null=False)
+    email=models.EmailField(null=False)
+    telefone=models.CharField(max_length=20,null=False)
+    
